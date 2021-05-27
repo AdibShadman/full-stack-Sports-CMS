@@ -1,0 +1,104 @@
+Welcome to Peterman Ratings!
+
+Peterman Ratings uses principles of conditional probability to accurately and fairly rate players in the sports TENNIS, BADMINTON and SQUASH. It does this for both individual and doubles matchups.
+
+If you are a TENNIS, BADMINTON or SQUASH player, we’re sure you will like Peterman Ratings. You can compare your ratings to other members of your club, players from your state, your nation or even internationally. Even if you don’t win trophies or prize money, you can always gain rating points using Peterman Ratings!
+
+If you are an administrator for a TENNIS, BADMINTON or SQUASH club, you will find Peterman Ratings useful. You can join Peterman Ratings and produce ratings for your club members. You will know to a high degree of accuracy how good players are or how they are improving. For a record of match results at events, seeding, event eligibility, rankings, look no further than Peterman Ratings!
+
+At Peterman Ratings our motto is “How GOOD are you REALLY?”
+
+
+<h3>About us</h3> 
+
+Peterman Ratings began in response to the dearth of meaningful rating systems for Tennis, Badminton and Squash. Starting in Tasmania, Australia it is for 3 grassroots level individual sports. Players are sometimes rated by the “expert eye” of a senior player, a time consuming and subjective process. Comparing players abilities at a glance across the state, country or the world would be impossible. If there was a computerised system in place, it acted like a “black box” producing a number, with no uncertainty attached to the “rating”. They rely on many factors and are often volatile. I thought “there must be a better way”. The objective of Peterman Ratings is to provide accurate ratings by following players progress as they play their matches in pennants and tournaments. As clubs from around the country and world join, their ratings can be readily compared. The algorithm is not a magical black box, but it is based on principles of conditional probability. Basically, if a weaker player beats a stronger player, points gained by the weaker player will be larger than if the weaker player lost to the stronger player. 
+
+I wish to acknowledge the statistical contribution of my mentor Mr Barrie Robinson MSc.
+
+We believe great clubs need a great rating system.
+
+Needing to deploy the system on the World Wide Web, in Feb 2019 I put the project up for consideration for 3rd year students at the Launceston campus of The University of Tasmania. Thanks to Associate Professor Kristy De Sales for running this great service! The website was built from the ground up using a combination of web technologies. The maths engine for the site is powered by Maple™.
+
+My appreciation to team members Marcus Grantham (Project Manager), James Watkins (Lead Programmer), Grant Upson (Database Programmer), Harinder Pal Singh (Lead Documenter), Adib Shadman Ornob (Client Liaison), Yusuf Uzun (Lead Designer) and Mingxin Wen (Lead Designer). 
+
+If your club would like to join up, send a message to petermanratings@gmail.com
+
+Each club will need to nominate at least one Tournament Director. They are responsible for updating their players wins and losses for tournaments or pennants. It’s a very easy job, thanks to Peterman Ratings intuitive graphic user interface.
+
+Peter Hadrill BAppSc
+
+
+<h3>What is it </h3>
+
+Peterman Ratings is a computerised, automated web-based rating system that is accurate, accessible to anyone anywhere, is easy to use, and provides comprehensive information on events, matches, results, and ratings.
+Most ratings systems have little or no basis in statistics, have many parameters and are often volatile. In contrast, Peterman Ratings is based on sound theory and only has only a few parameters, and each has a clear meaning.
+
+
+<h3>How it works</h3>
+
+It is important to remember a player’s strength cannot be known exactly, one can only estimate it. The system does this by analyzing match results and constructing a probability distribution (known as a law) to describe a player’s playing strength. To put it another way we not only record a rating for each player but also record a measurement of the level of confidence in that rating.
+
+A player's strength is the rating the player would/should have if his rating accurately matched his playing ability. A player's rating is just that, a somewhat arbitrary number that varies as the player competes, increasing following wins, decreasing following losses.
+Player's with equal strengths should ideally win/lose at the same rate when playing against each other.
+It's quite possible for a player's actual playing strength to be significantly different from his rating.  With enough play (data) that will be corrected as the rating is adjusted. The more matches you play the more accurate your rating will be, because the system has more knowledge about your ability. 
+
+The underlying basis of the system is based on mathematical and statistical principles, known as Bayesian probability (Reverend Thomas Bayes was the father of conditional probability). It’s evidence based. When more information is added to the system (your wins and losses), the more accurate your rating will become.
+
+ The numbers next to each player are interpreted as follows. The first number is the players rating. The second number separated by the +/- sign is the Ratings Deviation (RD), which represents the uncertainty of the rating. These two numbers make up a player’s "law" which is known as a probability distribution. The second number informs the first. The lower the RD the more confidence we have the rating is accurate. The higher the RD, the less confidence we have the rating is accurate.
+
+At Peterman Ratings we have a visual cue to instantly know how much belief you can place in a players rating. Based upon the ratings deviation player’s rankings will be marked as green for very accurate rankings (i.e. low ratings deviation < 50), amber for medium accuracy (i.e. ratings deviation 50-100) and red for low accuracy (i.e. high ratings deviation > 100).
+
+The rating scale nominally varies between 0 to ~3800. However, it also records a Rating Deviation (R.D.), which is a measurement of the confidence held in the rating.
+
+We construct a model assuming a player’s ability is normally distributed with a standard deviation about a mean. We assume in this context the mean (the Rating) to be an estimate of player strength. As they play events you would expect this number to increase or decrease as the player gets better or worse. However, we can never know for certain a stronger opponent will defeat a weaker opponent. When a weaker player defeats a stronger player, this is termed an “upset”. The larger the difference in the playing strengths, the more likely it is the weaker player will lose. The chance-of-upset graph quantifies this. Where two players ratings are the same, the chance of an upset is 50%: toss a coin. Where the difference is 400 points or more, the chance of an upset is close to zero. It’s fairly intuitive.
+<<<<<<< Updated upstream
+
+<div class="about-us-graph">
+      <img src="./editable/images/pointOfDifference.png">
+    </div>
+=======
+  
+  
+>>>>>>> Stashed changes
+
+According to the Central Tendency Theorem, a player with a rating of 1000 with an R.D. of 50 means we have 68% confidence the actual playing strength is between 950 and 1050 (that is, within 1 R.D. of the rating). There is a 95% confidence the actual playing strength is between 900 and 1100 (that is, within 2 R.D.s of the rating). There is a 99.7% confidence the actual playing strength is between 850 and 1150 (that is, within 3 R.D.s of the rating).
+  
+  <div class="about-us-graph">
+      <img src="./editable/images/centralTendency.png">
+    </div>
+
+For most clubs, novice players may start with a rating of 300, Intermediate 500 and reasonably good 800. It is good practice to play sight unseen players against a known player (in the green or amber zone) to get an indication of their ability. Regardless, every new player ranking will have a high R.D. to indicate that this ranking is inaccurate. The system then homes in on their correct rating as they play more events.
+Before I play a new opponent, I look at their RD as much as I do their rating.  A high RD tells me the player might have had a lay-off period (so he will probably be weaker than his rating suggests). 
+The player’s law changes with every match the algorithm processes. After each match, the RD for both players will decrease, ie their ratings will be more accurate because more information has been added to the system.
+
+The system doesn't care if the match is close or a one-sided thrashing; it only cares who won or lost the match. If a much stronger player beats a weaker player, the weaker player will lose few rating points or none (because the result is expected) while the stronger player will gain only a few points or none at all. 
+On the other hand, if an upset occurs, the weaker player will gain points, and the stronger player will lose points. How much will depend on how far their rankings differ and their RD's. The only time  equal amount of ratings points will be exchanged (so called zero-sum gain) is when the two player’s RD are equal.  
+
+The system encourages competitors to play regularly. In the days following a pennant or tournament the players individual RD's will rise until they play again. If they play regularly (say weekly), the increase in RD will be small. If a player has a significant layoff period, his RD rating deviation will increase at about 75 points a year (though their rating will stay the same). 
+ If a player plays regularly and an upset occurs, they will lose less points than if they would had they had a long layoff period (dormancy) preceding the event. If they haven’t played competitively for a year, you would expect their ability to decrease. However, they may have been at an intensive training camp, and come back improved. The system allows for both contingencies, even if the later is less likely. This facet of the model is designed to keep players competing regularly, rather than players staying out to "protect" their ratings. To further incentivise dormant players to play again, the rating will increase by 7 points per year, but they will not be credited these points until they play again.
+  
+
+<h3>Note for Tournament Directors</h3>
+
+Peterman Ratings is provided as a service to Tennis, Squash and Badminton clubs to provide their players with the most accurate sports rating available.
+
+Each club needs to nominate at least one Tournament Director. Each club can have more than one tournament director depending upon how big the club is (in case all the responsibilities can't be handled by one tournament director). They will be mainly responsible for uploading events like tournaments and pennants into the system for their club. Tournament directors can add or remove another tournament director for the same club. They can edit player details and events only for their club.
+
+Administrators can manage all clubs. They are able to add, delete another administrator or tournament director. They can update player's wins and loses and correct false information. Administrator can update events and players of all available clubs in the system. At present site owner is the only Administrator.
+
+Where a club is new to Peterman Ratings it is strongly suggested each member, regardless of ability, is given an initial rating of 1500 +/- 500 (this is to initially seed the system). 
+
+When the system has processed some singles events and ratings have settled down, new players can be slotted in according to their actual abilities. The Tournaments Director chooses an initial prior: Beginner, Intermediate or Advanced. It is important an appropriately chosen prior is chosen with a sufficiently large ratings deviation.
+
+For a singles rating, Individuals need to play quite a few singles matches (depending on the two ratings deviations) to get an accurate rating (coloured green: standard deviation <=50). 
+For doubles, the fastest route to pair accuracy will be obtained if the two players have played singles are “in the green” (under the Peterman Ratings schema) before being processing their doubles matches. Those players who only play doubles, will have to be assigned an appropriate singles rating before their doubles events are processed.
+
+At the beginning the ratings will be quite volatile, but this volatility reduces when more matches are uploaded (in pennants or tournaments). 
+
+The results of each match are a win or a loss only, it does not recognise drawn matches. Where a match is abandoned due to time constraints or inclement weather (tennis for example), the “drawn” match cannot be entered into Peterman Ratings. Assume it never happened.
+
+After the Tournament Director uploads new event data, and it has been processed, all players who have played in that event will be emailed indicating their win/loss status for each match they have played and their new ranking. This email will be marked as from the website but the “reply to” field will be the email address of the Tournament Director .
+
+
+
+
