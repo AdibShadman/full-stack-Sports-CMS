@@ -19,3 +19,6 @@ to populate the database.
 Built with:
 
 HTML5: for static content CSS: for formating Javacsript, Ajax, jQuery for client side interactivity, PHP for server side interactivity, MySql for data storage and retrieval, AJAX for sending and retrieving data asynchronously.
+
+Here is a demonstration video: 
+https://vimeo.com/555991927/ad678f3b06
