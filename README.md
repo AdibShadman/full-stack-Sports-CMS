@@ -16,3 +16,6 @@ This CMS system is live in petermanratings.com. However, to get started, here ar
    mysql -u username –-password=your_password database_name < test_build_database.sql
 to populate the database.
  
+Built with:
+
+HTML5: for static content CSS: for formating Javacsript, Ajax, jQuery for client side interactivity, PHP for server side interactivity, MySql for data storage and retrieval, AJAX for sending and retrieving data asynchronously.
